@@ -21,6 +21,17 @@ public class DatabaseHandler {
 		try{
 			new File("plugins" + File.separator + "EpicQuest" + File.separator + "Players").mkdirs();
 			c = DriverManager.getConnection("jdbc:sqlite:plugins" + File.separator + "EpicQuest" + File.separator + "Players" + File.separator + "players.db");
+			c.createStatement().executeUpdate("create table if not exists Players" +
+											 "(Name				TEXT	NOT NULL," +
+											 " Completed_Quests	TEXT	NOT NULL," +
+											 " Quest			TEXT	NOT NULL," + 
+											 " Time_Quests		TEXT	NOT NULL," +
+											 " Money_Earned		INT		NOT NULL," +
+											 " Quests_Completed	INT		NOT NULL," +
+											 " Quests_Dropped	INT		NOT NULL," +
+											 " Quests_Get		INT		NOT NULL," +
+											 " Tasks_Completed	INT		NOT NULL," +
+											 " Daily_Left		INT		NOT NULL)");
 		}catch(Exception e){
 			System.out.println(e.getMessage());
 		}
