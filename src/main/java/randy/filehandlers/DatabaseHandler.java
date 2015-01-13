@@ -1,40 +1,33 @@
-/*package main.java.randy.filehandlers;
+package main.java.randy.filehandlers;
 
 import java.io.File;
-import java.util.logging.Logger;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
-import lib.PatPeter.SQLibrary.Database;
-import lib.PatPeter.SQLibrary.SQLite;
 import main.java.randy.engine.EpicPlayer;
 
 public class DatabaseHandler {
-	private static Database sql;
+	static Connection c = null;
 	
-	public static void savePlayers(EpicPlayer epicPlayer){
-		if(!databaseIsOpen()) try{
-				openDatabaseConnection();
-			}catch(Exception e){
-				setDatabaseConnection(Logger.getLogger("minecraft"),
-	                      "[EpicQuest]",
-	                      "plugins" + File.separator + "EpicQuest" + File.separator + "players",
-	                      "Players",
-	                      ".sqlite");
-			}
+	public static void savePlayer(EpicPlayer player){
+		setupDatabase();
 	}
 	
-	public static void setDatabaseConnection(Logger logger, String prefix, String location, String filename, String extension){
-		sql = new SQLite(logger, prefix, location, filename, extension);
+	public static void loadPlayer(EpicPlayer player){
+		setupDatabase();
 	}
 	
-	public static void openDatabaseConnection(){
-		sql.open();
-	}
-	
-	public static boolean databaseIsOpen(){
-		return sql.isOpen();
+	private static void setupDatabase(){
+		try{
+			new File("plugins" + File.separator + "EpicQuest" + File.separator + "Players").mkdirs();
+			c = DriverManager.getConnection("jdbc:sqlite:plugins" + File.separator + "EpicQuest" + File.separator + "Players" + File.separator + "players.db");
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	//TODO: Make the DatabaseHandler act the same as this method
+	//TODO: Determine HOW to store relevant info
 	/*public static void savePlayer(EpicPlayer epicPlayer){		
 		UUID id = epicPlayer.getPlayerID();
 		File savefile = new File("plugins" + File.separator + "EpicQuest" + File.separator + "Players" + File.separator + id.toString() + ".yml");
@@ -105,7 +98,5 @@ public class DatabaseHandler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-}*/
-
-//TODO: Add database handling
+	}*/
+}
