@@ -1,0 +1,35 @@
+/* Website developed and designed by bigbeno37 (https://github.com/bigbeno37)
+   Created for showcasing Randy Schouten's EpicQuest Bukkit plugin
+
+                                    Website licensed under the MIT license */
+
+/* Navigation Bar Styling */
+.nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    z-index: 999;
+}
+
+.navbar{
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.logo, .links{
+    display: inline-block;
+}
+
+.links{
+    float: right;
+    position: relative;
+    top: 30px;
+}
+
+/* Actual content styling */
+.content{
+    position: relative;
+}
+
+.Footer{}
