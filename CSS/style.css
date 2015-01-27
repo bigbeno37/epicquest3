@@ -3,6 +3,12 @@
 
                                     Website licensed under the MIT license */
 
+/* Resetting default link properties */
+a:link, a:visited, a:hover, a:active{
+    background-color: #000;
+    text-decoration: none;
+}
+
 /* Navigation Bar Styling */
 .nav{
     width: 100%;
@@ -31,3 +37,4 @@
 .content{
     position: relative;
 }
+
