@@ -33,8 +33,9 @@ function setupValues(){
     // Creates dictionary-like access to colours
     palette = {};
     palette["navbar"] = '#9EBF6D';
-    palette["content1"] = '#D8F1D3';
-    palette["content2"] = '#BBE2BC';
+    palette["jumbotron"] = 'url("Resources/congruent_pentagon.png")';
+    palette["content1"] = '#FFFFFF';
+    palette["content2"] = '#f2f2f2';
     palette["footer"] = '#E4F1C3';
 
     // Purely convenience array that contains all major content classes
@@ -57,6 +58,9 @@ function setupAttributes(){
         setupElementProperties(".content " + list_of_classes[i] + " div");
         setElementBackground(".content " + list_of_classes[i], i);
     }
+
+    // Manually set colour of class
+    $(".content .what-is-it").css("background-image", palette["jumbotron"]);
 }
 
 $(document).ready(function(){

@@ -61,8 +61,13 @@ a:link, a:visited, a:hover, a:active{
     position: relative;
 }
 
-.content .what-is-it h1{
-    font-size: 10em;
+.content .what-is-it h2{
+    font-size: 5em;
     font-family: 'Oswald', serif;
+}
+
+.content .what-is-it p{
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
