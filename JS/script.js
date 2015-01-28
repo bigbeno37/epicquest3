@@ -33,7 +33,13 @@ function setupValues(){
     // Creates dictionary-like access to colours
     palette = {};
     palette["navbar"] = '#9EBF6D';
-    palette["jumbotron"] = 'url("Resources/congruent_pentagon.png")';
+    palette["jumbotron"] = {"background": "-moz-linear-gradient(top,  rgba(158,191,109,1) 0%, rgba(158,191,109,1) 48%, rgba(0,110,46,0) 100%)",
+                            "background": "-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(158,191,109,1)), color-stop(48%,rgba(158,191,109,1)), color-stop(100%,rgba(0,110,46,0)))",
+                            "background": "-webkit-linear-gradient(top,  rgba(158,191,109,1) 0%,rgba(158,191,109,1) 48%,rgba(0,110,46,0) 100%)",
+                            "background": "-o-linear-gradient(top,  rgba(158,191,109,1) 0%,rgba(158,191,109,1) 48%,rgba(0,110,46,0) 100%)",
+                            "background": "-ms-linear-gradient(top,  rgba(158,191,109,1) 0%,rgba(158,191,109,1) 48%,rgba(0,110,46,0) 100%)",
+                            "background": "linear-gradient(to bottom,  rgba(158,191,109,1) 0%,rgba(158,191,109,1) 48%,rgba(0,110,46,0) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ebf6d', endColorstr='#00006e2e',GradientType=0 )"};
     palette["content1"] = '#FFFFFF';
     palette["content2"] = '#f2f2f2';
     palette["footer"] = '#E4F1C3';
@@ -60,7 +66,8 @@ function setupAttributes(){
     }
 
     // Manually set colour of class
-    $(".content .what-is-it").css("background-image", palette["jumbotron"]);
+    // $(".content .what-is-it").css("background-image", palette["jumbotron"]);
+    $(".content .what-is-it").css(palette["jumbotron"]);
 }
 
 $(document).ready(function(){
