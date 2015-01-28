@@ -28,7 +28,7 @@ function setupValues(){
     global_element_width = 900;
 
     // Setup the height of the navbar
-    navbar_height = 50;
+    navbar_height = 60;
 
     // Creates dictionary-like access to colours
     palette = {};
@@ -45,20 +45,16 @@ function setupValues(){
 
 function setupAttributes(){
     // Setup navbar properties
-    $(".nav").css("background-color", palette["navbar"]);
+    $(".nav").css({"background-color": palette["navbar"], "max-height": navbar_height});
     $(".navbar").css("width", global_element_width);
-    $(".logo img").css("max-height", navbar_height);
 
     // Setup content attributes
     $(".content").css("top", navbar_height);
 
     // For every class in list_of_classes, set the width to global_element_width
     // As well as this, center every class
-    for(var i = 0; i < list_of_classes.length; i++){
+    for(var i = 0; i < list_of_classes.length; i++) {
         setupElementProperties(".content " + list_of_classes[i] + " div");
-    }
-
-    for(var i = 0; i < list_of_classes.length; i++){
         setElementBackground(".content " + list_of_classes[i], i);
     }
 }
@@ -67,3 +63,54 @@ $(document).ready(function(){
     setupValues();
     setupAttributes();
 });
+
+/* To be added into code at later date
+   Code came from old personal project of mine
+
+----------------------------------------------
+
+var homeIsBeingHovered = false;
+
+$(".menu a").hover(
+    function(){
+
+        console.log("We are hovering!");
+
+        if($(".currentlySelected").is(":hover")){
+            $(this).animate({
+                backgroundColor: "#d84d36"
+            }, 100);
+
+            homeIsBeingHovered = true;
+        }else{
+            $(this).animate({
+                backgroundColor: "#d84d36"
+            }, 100);
+
+            $(".currentlySelected").animate({
+                backgroundColor: "#F0563D"
+            }, 100);
+
+            homeIsBeingHovered = false;
+        }
+    }, function(){
+
+        console.log("We aren't hovering!");
+
+        if(homeIsBeingHovered){
+            $(".currentlySelected").animate({
+                backgroundColor: "#d84d36"
+            }, 100);
+        }else{
+            if(!$(".menu").is(":hover")){
+                $(".currentlySelected").animate({
+                    backgroundColor: "#d84d36"
+                }, 100);
+            }
+
+            $(this).animate({
+                backgroundColor: "#F0563D"
+            }, 100);
+        }
+    }
+);*/

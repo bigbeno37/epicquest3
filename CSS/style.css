@@ -3,10 +3,17 @@
 
                                     Website licensed under the MIT license */
 
+/* ----------------------------------------------------------------------- */
+
 /* Resetting default link properties */
 a:link, a:visited, a:hover, a:active{
-    background-color: #000;
     text-decoration: none;
+    color: #000000;
+}
+
+/* Default font to Open Sans */
+*{
+    font-family: 'Open Sans', serif;
 }
 
 /* Navigation Bar Styling */
@@ -19,12 +26,17 @@ a:link, a:visited, a:hover, a:active{
 }
 
 .navbar{
-    padding: 0 10px;
     margin: 0 auto;
 }
 
 .logo, .links{
     display: inline-block;
+}
+
+.logo h1{
+    font-family: 'Oswald', serif;
+    position: relative;
+    bottom: 15px;
 }
 
 .links{
@@ -33,8 +45,24 @@ a:link, a:visited, a:hover, a:active{
     top: 30px;
 }
 
+/* Though being a 'global' styling, the default selected class is .links .what-is-it */
+#selected{
+    border: 3px none coral;
+    border-bottom-style: solid;
+}
+
+.links a{
+    margin: 0 7px;
+}
+
+
 /* Actual content styling */
 .content{
     position: relative;
+}
+
+.content .what-is-it h1{
+    font-size: 10em;
+    font-family: 'Oswald', serif;
 }
 
