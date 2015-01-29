@@ -22,6 +22,8 @@ var global_element_width;
 var palette;
 var navbar_height;
 var list_of_classes;
+var size_of_icon;
+var width_of_feature_description;
 
 function setupValues(){
     // Setup base width
@@ -46,6 +48,12 @@ function setupValues(){
 
     // Purely convenience array that contains all major content classes
     list_of_classes = [".what-is-it", ".features", ".commands", ".how-to-use", ".contributing", ".license", ".footer"];
+
+    // Setting the size of the svg dot points
+    size_of_icon = 90;
+
+    // Determine size of feature description
+    width_of_feature_description = (global_element_width - size_of_icon) - 30;
 }
 
 /* Giving some CSS to the classes */
@@ -65,9 +73,15 @@ function setupAttributes(){
         setElementBackground(".content " + list_of_classes[i], i);
     }
 
-    // Manually set colour of class
-    // $(".content .what-is-it").css("background-image", palette["jumbotron"]);
+    // Add jumbotron settings to .what-is-it class
     $(".content .what-is-it").css(palette["jumbotron"]);
+
+    // Setting up conditions for feature display
+    $(".feature").css("height", size_of_icon+40);
+
+    $(".feature-content").css("width", width_of_feature_description);
+
+    $(".feature-picture").css({"height": size_of_icon, "width": size_of_icon});
 }
 
 $(document).ready(function(){

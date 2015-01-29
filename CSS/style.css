@@ -73,7 +73,64 @@ body{
 .content .what-is-it p{
     font-size: 1.5em;
     font-weight: bold;
-
-    
 }
+
+.content .features h1{
+    text-align: center;
+}
+
+/* Feature list styling */
+
+.feature{
+    border: 1px solid black;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.feature-content, .feature-picture{
+    display: inline-block;
+
+    position: relative;
+    top: 20px;
+}
+
+.feature-picture{
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+
+    border: 1px solid black;
+
+    top: 15px;
+}
+
+/* Manual Feature picture settings*/
+#one, #two, #three{
+    position: relative;
+}
+
+#one{
+    left: 15px;
+    top: 13px;
+}
+
+#two{
+    left: 11px;
+    top: 12px;
+}
+
+#three{
+    left: 18px;
+    top: 12px;
+}
+
 
