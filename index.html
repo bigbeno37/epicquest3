@@ -33,7 +33,6 @@
                 <div class="links">
                     <a href="#what-is-it" class="what-is-it" id="selected">What is it?</a>
                     <a href="#features" class="features">Features</a>
-                    <a href="#commands" class="commands">Commands</a>
                     <a href="#how-to-use" class="how-to-use">How to use</a>
                     <a href="#contributing" class="contributing">Contributing</a>
                     <a href="#license" class="license">License</a>
@@ -98,203 +97,27 @@
 
                     <div class="feature">
                         <div class="feature-content left left-align">
+                            <h1>Open-source License</h1>
+
+                            <p>EpicQuest is licensed under the open-source MIT license. This means that you can use this plugin in any way you want to, so long as you include the MIT license with it</p> 
+                        </div>
+
+                        <div class="feature-picture right">
+                            <i class="fa fa-gavel fa-4x" id="four"></i>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-content left left-align">
                             <h1>Help Contribute!</h1>
 
                             <p>EpicQuest is completely 100% open-source! Come check out our code on GitHub and join our community</p>
                         </div>
 
                         <div class="feature-picture right">
-                            <i class="fa fa-server fa-4x" id="four"></i>
+                            <i class="fa fa-server fa-4x" id="five"></i>
                         </div>
                     </div>
-
-                    <!--<ul>
-                        <li>Quest types:<ul>
-                            <li>Collect</li>
-                            <li>Kill</li>
-                            <li>Killplayer</li>
-                            <li>Killanyplayer</li>
-                            <li>Destroy</li>
-                            <li>Place</li>
-                            <li>Levelup</li>
-                            <li>Enchant</li>
-                            <li>Tame</li>
-                            <li>Craft</li>
-                            <li>Smelt</li>
-                            <li>TalkToVillager</li>
-                            <li>Killanymob</li>
-                            <li>Killmobbyname</li>
-                            <li>Repair</li>
-                            <li>Goto</li>
-                            <li>Clickblock</li>
-                            <li>Executecommand</li>
-                        </ul>
-                        </li>
-
-                        <li>Quest rewards:<ul>
-                            <li>Money (Vault)</li>
-                            <li>Items</li>
-                            <li>Permission group (Vault)</li>
-                            <li>Commands execution</li>
-                            <li>Heroes Experience</li>
-                        </ul>
-                        </li>
-
-                        <li>Supported plugins:<ul>
-                            <li>Citizens</li>
-                            <li>Heroes</li>
-                            <li>MythicMobs and all other custom mob plugins through the &quot;Kill Mob By Name&quot; quest type</li>
-                        </ul>
-                        </li>
-
-                        <li>Progress a quest in only the specified worlds</li>
-
-                        <li>Player statistics</li>
-
-                        <li>Permissions</li>
-
-                        <li>Quest requirements</li>
-
-                        <li>Quest lock time after finish (for daily quests and the likes)</li>
-
-                        <li>Sign support</li>
-
-                        <li>Any block as quest-giver</li>
-
-                        <li>Spawn villagers who give quests</li>
-
-                        <li>Party functionality</li>
-
-                        <li>Check which quests you have in a book - no commands! -</li>
-
-                        <li>Includes Vault integration</li>
-                    </ul>
-                    <h1>Coming Soon:</h1>
-                    <ul>
-                        <li>RPG Items support (collect quest type and rewards)</li>
-
-                        <li>BarAPI for progress tracking</li>
-                    </ul>-->
-                </div>
-            </div>
-
-            <div class="commands">
-                <a id="commands"></a>
-
-                <div>
-                    <h1>Commands</h1>
-
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Command</th>
-                            <th>Description</th>
-                            <th>Permission</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>give</td>
-                            <td>Give random quest</td>
-                            <td>epicquest.user.give</td>
-                        </tr>
-                        <tr>
-                            <td>give &lt;number&gt;</td>
-                            <td>Give specified quest from the QuestList</td>
-                            <td>epicquest.user.give</td>
-                        </tr>
-                        <tr>
-                            <td>turnin</td>
-                            <td>Turn all your quests in</td>
-                            <td>epicquest.user.turnin</td>
-                        </tr>
-                        <tr>
-                            <td>questbook or qb</td>
-                            <td>Shows the quests you have</td>
-                            <td>epicquest.user.questbook</td>
-                        </tr>
-                        <tr>
-                            <td>info &lt;number&gt;</td>
-                            <td>Shows info on the specified quest from the QuestBook</td>
-                            <td>epicquest.user.info</td>
-                        </tr>
-                        <tr>
-                            <td>drop &lt;number&gt;</td>
-                            <td>Drops the specified quest from the QuestBook</td>
-                            <td>epicquest.user.drop</td>
-                        </tr>
-                        <tr>
-                            <td>stats &lt;playername&gt;</td>
-                            <td>Shows player statistics</td>
-                            <td>epicquest.user.stats</td>
-                        </tr>
-                        <tr>
-                            <td>help</td>
-                            <td>Shows help pages</td>
-                            <td>epicquest.user.help</td>
-                        </tr>
-                        <tr>
-                            <td>questblock &lt;give/turnin&gt; &lt;(if give)random/questnumber&gt;</td>
-                            <td>Options for the block you&#39;re looking at</td>
-                            <td>epicquest.admin.questblock</td>
-                        </tr>
-                        <tr>
-                            <td>party</td>
-                            <td>Shows party members</td>
-                            <td>epicquest.user.party</td>
-                        </tr>
-                        <tr>
-                            <td>party invite &lt;playername&gt;</td>
-                            <td>Invites a player to your party</td>
-                            <td>epicquest.user.party</td>
-                        </tr>
-                        <tr>
-                            <td>party accept</td>
-                            <td>Accepts the current party invitation</td>
-                            <td>epicquest.user.party</td>
-                        </tr>
-                        <tr>
-                            <td>party kick &lt;playername&gt;</td>
-                            <td>Kicks a player from your party if you are leader</td>
-                            <td>epicquest.user.party</td>
-                        </tr>
-                        <tr>
-                            <td>party leader &lt;playername&gt;</td>
-                            <td>Makes somebody else the party leader</td>
-                            <td>epicquest.user.party</td>
-                        </tr>
-                        <tr>
-                            <td>party leave</td>
-                            <td>Leave your current party</td>
-                            <td>epicquest.user.party</td>
-                        </tr>
-                        <tr>
-                            <td>party chat</td>
-                            <td>Toggles party chat</td>
-                            <td>epicquest.user.party</td>
-                        </tr>
-                        <tr>
-                            <td>questentity create &lt;name&gt; &lt;quest&gt;</td>
-                            <td>Spawns a villager with a quest. Check the questentities.yml file after reloading the server for more advanced options!</td>
-                            <td>epicquest.admin.questentity</td>
-                        </tr>
-                        <tr>
-                            <td>questentity create &lt;name&gt;</td>
-                            <td>Select a Citizen after this command to make him give quests. Check the questentities.yml file after reloading the server for more advanced options!</td>
-                            <td>epicquest.admin.questentity</td>
-                        </tr>
-                        <tr>
-                            <td>questentity remove &lt;name&gt;</td>
-                            <td>Remove a villager with a quest</td>
-                            <td>epicquest.admin.questentity</td>
-                        </tr>
-                        <tr>
-                            <td>reload</td>
-                            <td>Reload quests from the quests file</td>
-                            <td>epicquest.admin.reload</td>
-                        </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
 
@@ -310,43 +133,11 @@
 
             </div>
 
-            <div class="license">
-                <a id="license"></a>
-
-                <div>
-                    <h2><a href="http://opensource.org/licenses/MIT">EpicQuest is licensed with the MIT license</a></h2>
-                    <div class="license-text">
-                        <p>
-                            The MIT License (MIT)
-
-                            Copyright (c) 2015 bigbeno37, Randy Schouten
-
-                            Permission is hereby granted, free of charge, to any person obtaining a copy
-                            of this software and associated documentation files (the "Software"), to deal
-                            in the Software without restriction, including without limitation the rights
-                            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-                            copies of the Software, and to permit persons to whom the Software is
-                            furnished to do so, subject to the following conditions:
-
-                            The above copyright notice and this permission notice shall be included in
-                            all copies or substantial portions of the Software.
-
-                            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-                            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-                            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-                            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-                            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-                            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-                            THE SOFTWARE.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
             <div class="footer">
                 <div>
                     <span>Website created and designed by bigbeno37 (<a href="http://github.com/bigbeno37">https://github.com/bigbeno37</a>)</span> <br />
-                    <span>EpicQuest actively designed and developed by Randy Schouten</span>
+                    <span>EpicQuest actively developed by Randy Schouten (<a href="http://github.com/akumasama">https://github.com/akumasama</a>)</span> <br />
+                    <span>Icons rendered from 'Font Awesome', created by <a href="http://fontawesome.io">Dave Gandy - http://fontawesome.io</a>
                 </div>
             </div>
         </div>

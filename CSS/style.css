@@ -23,6 +23,10 @@ a:link, a:visited, a:hover, a:active{
     top: 0;
 
     z-index: 999;
+
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.2);
+    box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.2);
 }
 
 .navbar{
@@ -57,8 +61,12 @@ a:link, a:visited, a:hover, a:active{
 
 
 /* Actual content styling */
-.content{
+.content .what-is-it{
     position: relative;
+
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.15);
+    -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.15);
+    box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.15);
 }
 
 body{
@@ -75,18 +83,7 @@ body{
     font-weight: bold;
 }
 
-/*.content .features h1{
-    text-align: center;
-}*/
-
 /* Feature list styling */
-
-/*.feature{
-    border: 1px solid black;
-    border-right-style: none;
-    border-left-style: none;
-    border-top-style: none;
-}*/
 
 .feature-content h1{
     font-size: 1.2em;
@@ -129,7 +126,7 @@ body{
 }
 
 /* Manual Feature picture settings*/
-#one, #two, #three, #four{
+#one, #two, #three, #four, #five{
     position: relative;
 }
 
@@ -149,6 +146,26 @@ body{
 }
 
 #four{
+    left: 12px;
+    top: 10px;
+}
+
+#five{
     left: 14px;
     top: 15px;
+}
+
+/* Footer stylings */
+.footer div span{
+    text-align: right;
+}
+
+.footer div{
+    color: #979797;
+    font-size: 0.8em;
+}
+
+.footer div a{
+    text-decoration: underline;
+    color: white;
 }

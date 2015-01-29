@@ -44,10 +44,10 @@ function setupValues(){
                             "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ebf6d', endColorstr='#00006e2e',GradientType=0 )"};
     palette["content1"] = '#FFFFFF';
     palette["content2"] = '#f2f2f2';
-    palette["footer"] = '#E4F1C3';
+    palette["footer"] = '#2f2f2f';
 
     // Purely convenience array that contains all major content classes
-    list_of_classes = [".what-is-it", ".features", ".commands", ".how-to-use", ".contributing", ".license", ".footer"];
+    list_of_classes = [".what-is-it", ".features", ".how-to-use", ".contributing", ".license", ".footer"];
 
     // Setting the size of the svg dot points
     size_of_icon = 90;
@@ -78,10 +78,11 @@ function setupAttributes(){
 
     // Setting up conditions for feature display
     $(".feature").css("height", size_of_icon+40);
-
     $(".feature-content").css("width", width_of_feature_description);
-
     $(".feature-picture").css({"height": size_of_icon, "width": size_of_icon});
+
+    // Setting colour of footer
+    $(".footer").css("background-color", palette["footer"]);
 }
 
 $(document).ready(function(){
