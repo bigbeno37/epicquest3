@@ -75,17 +75,21 @@ body{
     font-weight: bold;
 }
 
-.content .features h1{
+/*.content .features h1{
     text-align: center;
-}
+}*/
 
 /* Feature list styling */
 
-.feature{
+/*.feature{
     border: 1px solid black;
     border-right-style: none;
     border-left-style: none;
-    border-bottom-style: none;
+    border-top-style: none;
+}*/
+
+.feature-content h1{
+    font-size: 1.2em;
 }
 
 .left{
@@ -96,11 +100,22 @@ body{
     float: right;
 }
 
+.left-align h1{
+    text-align: left;
+}
+
+.right-align h1{
+    text-align: right;
+}
+
 .feature-content, .feature-picture{
     display: inline-block;
 
     position: relative;
-    top: 20px;
+}
+
+.feature-content{
+    right: 10px;
 }
 
 .feature-picture{
@@ -110,11 +125,11 @@ body{
 
     border: 1px solid black;
 
-    top: 15px;
+    top: 25px;
 }
 
 /* Manual Feature picture settings*/
-#one, #two, #three{
+#one, #two, #three, #four{
     position: relative;
 }
 
@@ -133,4 +148,7 @@ body{
     top: 12px;
 }
 
-
+#four{
+    left: 14px;
+    top: 15px;
+}
